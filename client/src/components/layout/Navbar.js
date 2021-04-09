@@ -12,17 +12,17 @@ export const Navbar = ({auth:{isAuthenticated, loading}, logout}) => {
     <li>
     <Link to="/posts">
     <i className="fas fa-comment-dots"></i>
-    <span className="hide-sm"> Posts </span>
+    <span className=""> Posts </span>
     </Link>
     </li>
 
      <li>
-    <Link to="/profiles"><i className="fas fa-users"></i>  <span className="hide-sm"> People </span></Link></li>
+    <Link to="/profiles"><i className="fas fa-users"></i>  <span className=""> People </span></Link></li>
 
     <li>
     <Link to="/profile/606e6d17afcf4c49e8451301">
     <i className="fas fa-user-shield"></i>
-    <span className="hide-sm"> Admin </span>
+    <span className=""> Admin </span>
     </Link>
     </li>
 
@@ -47,7 +47,7 @@ export const Navbar = ({auth:{isAuthenticated, loading}, logout}) => {
     <li>
     <Link to="/profile/606e6d17afcf4c49e8451301">
     <i className="fas fa-user-shield"></i>
-    <span className="hide-sm"> Admin </span>
+    <span className=""> Admin </span>
     </Link>
     </li>
     <li><Link to="/register">Register</Link></li>
