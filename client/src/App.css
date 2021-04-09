@@ -880,7 +880,16 @@ table th:last-child{
   .margin-r{
     padding: 0.1rem;
   }
+
+ .profiles{
+  position: relative;
+  width: 100%;
+ 
 }
+  
+}
+  
+
 @media (max-width: 700px) {
   .container {
     margin-top: 8rem;
@@ -952,6 +961,8 @@ table th:last-child{
   }
   .profiles{
     position: relative;
+    margin-left: 21px;
+    width: 100%;
     
   }
   .tablePosition{
@@ -1003,7 +1014,7 @@ table th:last-child{
   .profile {
     grid-template-columns: 1fr;
     text-align: center;
-    margin-left: 15%
+    position: relative;
   }
 
 
