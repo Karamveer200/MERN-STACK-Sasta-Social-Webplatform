@@ -13,7 +13,7 @@ const PostForm = ({ addPost}) => {
     return <Redirect to="/posts"/>
   }
   return (
-    <div className='post-form'>
+    <div className='PostFormDash2'>
       <div className='bg-primary p round-btn-only'>
         <h2>    Engage with the community!</h2>
         <h3>    Post something...</h3>

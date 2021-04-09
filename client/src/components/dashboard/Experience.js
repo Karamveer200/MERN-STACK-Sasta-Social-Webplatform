@@ -22,6 +22,7 @@ const Experience = ({experience, deleteExperience}) => {
     ));
     return (
         <Fragment>   
+                <div className='line2' />
                 <h2 className="tablePosition">Experience credentials</h2>
                 {experience.length>0? (
                     <Fragment>

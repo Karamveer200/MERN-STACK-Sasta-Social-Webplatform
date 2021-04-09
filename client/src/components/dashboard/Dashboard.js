@@ -38,16 +38,17 @@ const Dashboard = ({getCurrentProfile, deleteAccount, auth:{user}, profile:{prof
                 <p className="my-3">Your email is {user && user.email}</p>
                 {profile !== null?(
                     <Fragment>
-                    <span className="setPic"> 
+                    <div className="setPic"> 
                     {profile.pic!=null? (
-                    <img className="mypic hide-sm" src={profile.pic} alt=""/>
-                    ): <img className="mypic hide-sm" src={user.avatar} alt=""/>}
-                    </span>
+                    <img className="mypic" src={profile.pic} alt=""/>
+                    ): <img className="mypic" src={user.avatar} alt=""/>}
+                    </div>
                         <DashboardActions/>
+                        <div className='line' />
                         <div className="PostFormDash"><PostForm/></div>
                         <Experience experience={profile.experience}/>
                         <Education education={profile.education}></Education>
-                        <button className="btn-deleteAccount tablePosition" onClick={()=>deleteAccount()}>
+                        <button className="btn-deleteAccount tablePosition deletebtn" onClick={()=>deleteAccount()}>
                             <p><i className="fas fa-user-minus"></i> Delete Account</p>
                         </button>
                         

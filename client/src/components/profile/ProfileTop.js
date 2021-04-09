@@ -15,7 +15,7 @@ const ProfileTop = ({
 }) => {
   return (
     <div className="profile-top bg-light p-2">
-      <img className="round-img my-1" src={"../../../../"+pic} alt="" />
+      <img className="round-img my-1 set-profiletopImg" src={"../../../../"+pic} alt="" />
       {console.log(pic)}
       <h1 className="large">{name}</h1>
       <p className="lead">

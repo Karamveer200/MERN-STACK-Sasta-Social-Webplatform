@@ -28,36 +28,38 @@ const PostItem = ({ addLike,
             
                 {showActions&&(
                     <Fragment>
-                        <button
-                            onClick={() => addLike(_id)}
-                            type="button"
-                            className="btn btn-light"
-                        >
-                            <i className="fas fa-thumbs-up" />{' '}
-                            <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
-                        </button>
-                        <button
-                            onClick={() => removeLike(_id)}
-                            type="button"
-                            className="btn btn-light"
-                        >
-                            <i className="fas fa-thumbs-down" />
-                        </button>
-                        <Link to={`/posts/${_id}`} className="btn btn-back margin-r">
-                            Discussion{' '}
-                            {comments.length > 0 && (
-                            <span className="comment-count">{comments.length}</span>
-                            )}
-                        </Link>
-                        {!auth.loading && user === auth.user._id && (
+                        <div className="margin-adjustpost">
                             <button
-                            onClick={() => deletePost(_id)}
-                            type="button"
-                            className="btn btn-danger"
+                                onClick={() => addLike(_id)}
+                                type="button"
+                                className="btn btn-light"
                             >
-                            <i className="fas fa-times" />
+                                <i className="fas fa-thumbs-up" />{' '}
+                                <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
                             </button>
-                        )}
+                            <button
+                                onClick={() => removeLike(_id)}
+                                type="button"
+                                className="btn btn-light"
+                            >
+                                <i className="fas fa-thumbs-down" />
+                            </button>
+                            <Link to={`/posts/${_id}`} className="btn btn-back margin-r">
+                                Discussion{' '}
+                                {comments.length > 0 && (
+                                <span className="comment-count">{comments.length}</span>
+                                )}
+                            </Link>
+                            {!auth.loading && user === auth.user._id && (
+                                <button
+                                onClick={() => deletePost(_id)}
+                                type="button"
+                                className="btn btn-danger"
+                                >
+                                <i className="fas fa-times" />
+                                </button>
+                            )}
+                        </div>
                     </Fragment>
                 )}
             </div>

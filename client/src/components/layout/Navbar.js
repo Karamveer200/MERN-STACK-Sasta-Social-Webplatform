@@ -17,7 +17,7 @@ export const Navbar = ({auth:{isAuthenticated, loading}, logout}) => {
     </li>
 
      <li>
-    <Link to="/profiles"><i className="fas fa-users"></i> People</Link></li>
+    <Link to="/profiles"><i className="fas fa-users"></i>  <span className="hide-sm"> People </span></Link></li>
 
     <li>
     <Link to="/profile/606e6d17afcf4c49e8451301">
