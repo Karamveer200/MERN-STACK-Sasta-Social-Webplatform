@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import formatDate from '../../utils/formatDate';
+import React from "react";
+import PropTypes from "prop-types";
+import formatDate from "../../utils/formatDate";
 
 const ProfileEducation = ({
-  education: { school, degree, fieldofstudy, current, to, from, description }
+  education: { school, degree, fieldofstudy, current, to, from, description },
 }) => (
-  <div>
+  <div data-aos="fade-left">
     <h3 className="text-dark">{school}</h3>
     <p>
-      {formatDate(from)} - {to ? formatDate(to) : 'Now'}
+      {formatDate(from)} - {to ? formatDate(to) : "Now"}
     </p>
     <p>
       <strong>Degree: </strong> {degree}
@@ -23,7 +23,7 @@ const ProfileEducation = ({
 );
 
 ProfileEducation.propTypes = {
-  education: PropTypes.object.isRequired
+  education: PropTypes.object.isRequired,
 };
 
 export default ProfileEducation;

@@ -1,9 +1,8 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { createProfile, getCurrentProfile } from '../../actions/profile';
-
+import React, { Fragment, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { createProfile, getCurrentProfile } from "../../actions/profile";
 
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
@@ -11,25 +10,25 @@ function topFunction() {
 }
 
 const initialState = {
-  company: '',
-  website: '',
-  location: '',
-  status: '',
-  skills: '',
-  githubusername: '',
-  bio: '',
-  twitter: '',
-  facebook: '',
-  linkedin: '',
-  youtube: '',
-  instagram: ''
+  company: "",
+  website: "",
+  location: "",
+  status: "",
+  skills: "",
+  githubusername: "",
+  bio: "",
+  twitter: "",
+  facebook: "",
+  linkedin: "",
+  youtube: "",
+  instagram: "",
 };
 
 const ProfileForm = ({
   profile: { profile, loading },
   createProfile,
   getCurrentProfile,
-  history
+  history,
 }) => {
   const [formData, setFormData] = useState(initialState);
 
@@ -46,7 +45,7 @@ const ProfileForm = ({
         if (key in profileData) profileData[key] = profile.social[key];
       }
       if (Array.isArray(profileData.skills))
-        profileData.skills = profileData.skills.join(', ');
+        profileData.skills = profileData.skills.join(", ");
       setFormData(profileData);
     }
   }, [loading, getCurrentProfile, profile]);
@@ -63,13 +62,13 @@ const ProfileForm = ({
     facebook,
     linkedin,
     youtube,
-    instagram
+    instagram,
   } = formData;
 
-  const onChange = e =>
+  const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
     createProfile(formData, history, profile ? true : false);
@@ -83,11 +82,14 @@ const ProfileForm = ({
       </p>
       <small>* = required field</small>
 
-      
-
-      <form className="form" onSubmit={e=>onSubmit(e)}>       
+      <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
-          <select name="status" className="round-btn-only" value={status} onChange={onChange}>
+          <select
+            name="status"
+            className="round-btn-only"
+            value={status}
+            onChange={onChange}
+          >
             <option>* Select Professional Status</option>
             <option value="Developer">Developer</option>
             <option value="Junior Developer">Junior Developer</option>
@@ -125,7 +127,7 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-text">
-             Could be your own or a company website
+            Could be your own or a company website
           </small>
         </div>
         <div className="form-group">
@@ -161,7 +163,7 @@ const ProfileForm = ({
             className="round-btn-only"
             name="githubusername"
             value={githubusername}
-            onChange={e=>onChange(e)}
+            onChange={(e) => onChange(e)}
           />
           <small className="form-text">
             If you want your latest repos and a Github link, include your
@@ -183,10 +185,11 @@ const ProfileForm = ({
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
-            className="btn btn-primary btn-back round-btn-only">
+            className="btn btn-primary btn-back round-btn-only"
+          >
             Add Social Network Links
           </button>
-          <span>Optional</span>
+          <span className="optional">Optional</span>
         </div>
 
         {displaySocialInputs && (
@@ -253,7 +256,11 @@ const ProfileForm = ({
           </Fragment>
         )}
 
-        <input type="submit" className="btn btn-primary my-1 btn-blue-gradient round-btn-only" onClick={()=>topFunction()}/>
+        <input
+          type="submit"
+          className="btn btn-primary my-1 btn-blue-gradient round-btn-only"
+          onClick={() => topFunction()}
+        />
         <Link className="btn btn-back my-1 round-btn-only" to="/dashboard">
           Go Back
         </Link>
@@ -265,12 +272,13 @@ const ProfileForm = ({
 ProfileForm.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  profile: state.profile
+const mapStateToProps = (state) => ({
+  profile: state.profile,
 });
 
-export default connect(mapStateToProps, { createProfile, getCurrentProfile })(ProfileForm
+export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
+  ProfileForm
 );

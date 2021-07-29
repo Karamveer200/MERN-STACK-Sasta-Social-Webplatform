@@ -1,9 +1,0 @@
-{
-    "mongoURI": "mongodb+srv://karam:9837863333@cluster0.mkeak.mongodb.net/NEWDEVCONNECTOR?retryWrites=true&w=majority",
-    "jwtSecret": "mySecretToken",
-    "githubClientID":"73c8d46ea327b6b64ef7",
-    "githubSecret":"b651a1c1460c926d904d09a6a116f5dfb43c1bfc"  
-      
-}
-
-

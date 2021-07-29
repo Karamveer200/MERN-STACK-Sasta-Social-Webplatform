@@ -1,4 +1,6 @@
 /* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
 :root {
   --primary-color: #17a2b8;
   --dark-color: #343a40;
@@ -14,30 +16,63 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", "Ubuntu" !important;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
   color: #333;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
 }
 
+.bg {
+  animation: slide 12s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #d2dfff 50%, #80ecf8 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
 
-.dashBG
- {
-   background-image: linear-gradient(to right, #C9FFBF 0%, #FFAFBD  51%, #C9FFBF  100%);
-   transition: 1.3s;
-   background-size: 200% auto;        
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
- }
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 15s;
+}
 
- .dashBG:hover {
-   background-position: right center; /* change the direction of the change here */
-   text-decoration: none;
- }
+.bg3 {
+  animation-duration: 15s;
+}
 
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+.dashBG {
+  background-image: linear-gradient(
+    to right,
+    #c9ffbf 0%,
+    #ffafbd 51%,
+    #c9ffbf 100%
+  );
+  transition: 1.3s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
 
+.dashBG:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}
 
 a {
   color: var(--primary-color);
@@ -53,11 +88,10 @@ img {
 }
 
 p {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 /* Utilities */
-.container
-{
+.container {
   max-width: 85%;
   margin: auto;
   overflow: hidden;
@@ -66,14 +100,13 @@ p {
   margin-bottom: 3rem;
 }
 
-.allMiddle{
+.allMiddle {
   max-width: 85%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4%;
   overflow: hidden;
   padding: 0 2rem;
-
 }
 
 /* Text Styles*/
@@ -89,7 +122,7 @@ p {
   margin-bottom: 1rem;
 }
 
-.margin2{
+.margin2 {
   margin-left: 35px;
   margin-right: 35px;
 }
@@ -97,7 +130,7 @@ p {
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .text-center {
@@ -108,7 +141,6 @@ p {
   background: -webkit-linear-gradient(#8d5adf, #0883d4);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  
 }
 
 .text-dark {
@@ -165,10 +197,10 @@ p {
 }
 .my-3 {
   margin: 0 0 3rem 0;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
 }
 
-.my-marginup-only{
+.my-marginup-only {
   margin: 30px 0 0 0;
 }
 .btn {
@@ -185,7 +217,7 @@ p {
 }
 
 .btnblock {
-  display:inline-block;
+  display: inline-block;
   background: var(--light-color);
   color: #333;
   padding: 0.4rem 1.3rem;
@@ -195,15 +227,14 @@ p {
   margin-right: auto;
   transition: opacity 0.2s ease-in;
   outline: none;
-
 }
 
-.btnblock:hover{
-  background-color:dimgrey;
+.btnblock:hover {
+  background-color: dimgrey;
 }
 
-.dashboard-btns{
-  position:relative;
+.dashboard-btns {
+  position: relative;
   max-width: 100%;
   width: 100%;
   overflow-y: auto;
@@ -214,7 +245,7 @@ p {
 
 .badge {
   font-size: 0.8rem;
-  padding: .5rem;
+  padding: 0.5rem;
   text-align: center;
   margin: 0.3rem;
   background: var(--light-color);
@@ -235,76 +266,99 @@ p {
 .alert-primary {
   background: #7868e6;
   color: #fff;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .btn-light,
 .badge-light,
 .alert-light {
-  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
   border-radius: 15px 15px 15px 15px;
   color: #333;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-size: 1rem;
   right: 30px;
   position: relative;
-  
+}
+
+.hover-bg-change:hover {
+  background-image: linear-gradient(
+    to right,
+    #0dffcf 0%,
+    #0ae5b2df 51%,
+    rgb(20, 178, 236) 100%
+  );
+  color: black !important;
+  font-weight: 600 !important;
 }
 
 .bg-light {
-   background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
-   margin: 10px;
-   padding: 15px 45px;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: #333;          
-   box-shadow: 0 0 20px rgb(74, 191, 238);
-   border-radius: 15px;
-   display: block;
-   font-family: 'Ubuntu';
- }
- .bg-light:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
-
- .bg-light2 {
-  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
   margin: 10px;
   padding: 15px 45px;
-  transition: 1.0s;
+  transition: 0.5s;
   background-size: 200% auto;
-  color: #333;          
+  color: #333;
   box-shadow: 0 0 20px rgb(74, 191, 238);
   border-radius: 15px;
   display: block;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
+}
+.bg-light:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.bg-light2 {
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  transition: 1s;
+  background-size: 200% auto;
+  color: #333;
+  box-shadow: 0 0 20px rgb(74, 191, 238);
+  border-radius: 15px;
+  display: block;
+  font-family: "Ubuntu";
 }
 .bg-light2:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
- 
- .skill-color{
+
+.skill-color {
   background: blue;
   background-clip: text;
   -webkit-text-fill-color: transparent;
- }
+}
 
-.PostFormDash{
+.PostFormDash {
   bottom: 350px;
   width: 50%;
   position: relative;
 }
 
-.PostFormDash2{
+.PostFormDash2 {
   bottom: 0px;
   width: 100%;
   position: relative;
 }
-
 
 .btn-dark,
 .bg-dark,
@@ -315,26 +369,31 @@ p {
   border-radius: 15px;
 }
 
-.btn-dark:hover{
-  background:dimgrey;
+.btn-dark:hover {
+  background: dimgrey;
 }
 
 .navbar-gradient,
-.btn-gradient{
+.btn-gradient {
   background-color: #2185d0;
-  color:#fff;
+  color: #fff;
   background: linear-gradient(160deg, #590dd3, #0ee278) !important;
-  font-weight:550
+  font-weight: 550;
 }
 
 .btn-back {
-  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+  background-image: linear-gradient(
+    to right,
+    #77a1d3 0%,
+    #79cbca 51%,
+    #77a1d3 100%
+  );
   margin: 0 0 0 20px;
   padding: 15px 45px;
   text-align: center;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
 }
@@ -345,28 +404,38 @@ p {
   text-decoration: none;
 }
 
-
 .btn-deleteAccount {
-   background-image: linear-gradient(to right, #D31027 0%, #df7884  51%, #D31027  100%);
-   margin: 25px 10px 10px 80%;
-   padding: 8px 10px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
-   
- }
+  background-image: linear-gradient(
+    to right,
+    #d31027 0%,
+    #df7884 51%,
+    #d31027 100%
+  );
+  margin: 25px 10px 10px 80%;
+  padding: 8px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
 
- .btn-deleteAccount:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
-.white-bg{
+.btn-deleteAccount:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    #676363 0%,
+    #353434 51%,
+    #251c1d 100%
+  );
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.white-bg {
   color: #fff;
   background-color: #fff;
   position: inherit;
@@ -374,72 +443,79 @@ p {
   right: 10%;
   border-radius: 10px;
   text-align: center;
-  width:130px;
+  width: 130px;
 }
 
-.margin-adjust{
- bottom: 40px;
+.margin-adjust {
+  bottom: 40px;
 }
 
-.btn-size{
+.btn-size {
   width: 20%;
 }
-.white-bg-adjust{
+.white-bg-adjust {
   right: 15%;
   position: relative;
-  
-  
-  
 }
 
 .btn-blue-gradient {
-   background-image: linear-gradient(to right, #2db5eb 0%, #0072ff  51%, #a53ee9  100%);
-   margin: 0;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   position: inherit;
+  background-image: linear-gradient(
+    to right,
+    #2db5eb 0%,
+    #0072ff 51%,
+    #a53ee9 100%
+  );
+  margin: 0;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  position: inherit;
+}
+.down {
+  top: 10%;
+  position: relative;
+}
 
- }
- .down{
-   top: 10%;
-   position: relative;
- }
+.btn-blue-gradient:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: black;
+  text-decoration: none;
+}
 
+.btn-blue-contrast {
+  background-image: linear-gradient(
+    to right,
+    #1d976c 0%,
+    #93f9b9 51%,
+    #1d976c 100%
+  );
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+}
 
+.btn-blue-contrast:hover {
+  background-image: linear-gradient(
+    to right,
+    #36e6a5 0%,
+    #93f9b9 51%,
+    #1d976c 100%
+  );
+  color: black;
+  text-decoration: none;
+}
 
- .btn-blue-gradient:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: black;
-   text-decoration: none;
- }
-
-
- .btn-blue-contrast {
-    background-image: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%);
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    background-size: 200% auto;
-    color: white;            
-    border-radius: 10px;
-  }
-
-  .btn-blue-contrast:hover {
-    background-image:linear-gradient(to right, #36e6a5 0%, #93F9B9  51%, #1D976C  100%);
-    color: black;
-    text-decoration: none;
-  }
- 
-  .round-borders{
-    border-radius: 10px;
-  }
-
+.round-borders {
+  border-radius: 10px;
+}
 
 .btn-danger,
 .bg-danger,
@@ -447,6 +523,11 @@ p {
 .alert-danger {
   background: var(--danger-color);
   color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 .btn-success,
@@ -479,13 +560,13 @@ p {
   border-radius: 50%;
 }
 
-.round-btn-only{
+.round-btn-only {
   border-radius: 25px;
 }
-.margin-r{
+.margin-r {
   margin-right: 20px;
 }
-.btn-margins{
+.btn-margins {
   margin-left: 30;
 }
 .round-btn {
@@ -494,14 +575,16 @@ p {
   margin-left: 2%;
   max-width: 250px !important;
   text-align: center;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.loginRegisterForm{
+.loginRegisterForm {
   border-radius: 25px;
+  outline: none;
+  padding-right: 10px !important;
 }
 
-.line2{
+.line2 {
   display: none;
 }
 .line {
@@ -514,7 +597,7 @@ p {
 
 /* Overlay */
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   left: 0;
@@ -527,16 +610,39 @@ p {
   margin: 1.2rem 0;
 }
 
+.form-group > input:focus {
+  outline: none;
+  border: 2px solid rgb(117, 205, 229) !important;
+}
 
-.do:focus{
-  outline:1px solid;
-  
+.do:focus {
+  outline: 1px solid;
 }
 
 .form .form-text {
   display: block;
   margin-top: 0.3rem;
   color: #888;
+}
+.back-to-posts {
+  color: black !important;
+  font-weight: 500 !important;
+}
+
+.back-to-posts > span {
+  margin-left: 10px;
+  padding: 0 !important;
+}
+
+[data-aos="example-anim3"] {
+  transform: rotate(720deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="example-anim3"].aos-animate {
+  transform: rotate(0);
+  opacity: 1;
 }
 
 .form input[type="text"],
@@ -547,7 +653,8 @@ p {
 .form textarea {
   display: block;
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.4rem 0.4rem 0.4rem 0.9rem;
+
   font-size: 1.2rem;
   border: 1px solid #ccc;
 }
@@ -587,48 +694,44 @@ button {
   padding: 1rem;
   line-height: 1rem;
   text-align: left;
-  font-family: 'Ubuntu', sans-serif;
-
+  font-family: "Ubuntu", sans-serif;
 }
 
-.tablePosition{
+.tablePosition {
   position: relative;
   bottom: 300px;
 }
 
-.light-bg{
-  background:#a3d8f4;
+.light-bg {
+  background: #a3d8f4;
 }
 
 .table th {
   line-height: 17px;
   background: #7579e7;
   text-align: center;
-  
 }
 
-tr{
+tr {
   line-height: 5px;
 }
 
-tr td:first-child{
-  border-radius:10px 0 0 10px;
-
+tr td:first-child {
+  border-radius: 10px 0 0 10px;
 }
-tr td:last-child{
-  border-radius:0 10px 10px 0;
-}
-
-table th:first-child{
-  border-radius:10px 0 0 10px;
+tr td:last-child {
+  border-radius: 0 10px 10px 0;
 }
 
-table th:last-child{
-  border-radius:0 10px 10px 0;
+table th:first-child {
+  border-radius: 10px 0 0 10px;
 }
 
+table th:last-child {
+  border-radius: 0 10px 10px 0;
+}
 
-.mypic{
+.mypic {
   height: 300px;
   width: 300px;
   left: 70px;
@@ -636,21 +739,20 @@ table th:last-child{
   border-radius: 50%;
   position: inherit;
   top: 10px;
- 
 }
 
-.setPic{
+.setPic {
   position: relative;
   left: 65%;
   bottom: 100px;
 }
 
-.pushup{
+.pushup {
   position: relative;
   margin-bottom: 400px;
 }
 
-.centered{
+.centered {
   z-index: 3;
 }
 
@@ -686,17 +788,18 @@ table th:last-child{
 .navbar .welcome span {
   margin-right: 0.6rem;
 }
-
+.optional {
+  margin-left: 15px;
+}
 /* Landing Page */
 .landing {
   position: relative;
-  background: url("./img/showcase.jpg") no-repeat center center/cover;
+
   height: 100vh;
 }
 
-
 .landing-inner {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8);
   height: 100%;
   width: 80%;
   margin: auto;
@@ -769,11 +872,13 @@ table th:last-child{
 .profile-exp {
   grid-area: exp;
   border-radius: 10px;
+  background-image: linear-gradient(65deg, #feffff 0%, #b4fffb 100%);
 }
 
 .profile-edu {
   grid-area: edu;
   border-radius: 10px;
+  background-image: linear-gradient(65deg, #feffff 0%, #b4fffb 100%);
 }
 
 .profile-exp h2,
@@ -800,7 +905,9 @@ table th:last-child{
 
 .profile-github {
   grid-area: github;
-  border-radius: 10p;
+  border-radius: 10px;
+  background-image: linear-gradient(-65deg, #feffff 0%, #b4fffb 100%);
+  padding: 20px 30px;
 }
 
 .profile-github .repo {
@@ -808,8 +915,8 @@ table th:last-child{
   border-radius: 10px;
 }
 
-.margin{
-  top:15px;
+.margin {
+  top: 15px;
   position: relative;
 }
 .profile-github .repo > div:first-child {
@@ -834,6 +941,7 @@ table th:last-child{
   grid-gap: 2rem;
   align-items: center;
   border-radius: 20px;
+  background: linear-gradient(135deg, #feffff 0%, #b4fffb 100%);
 }
 
 .post > div:first-child {
@@ -860,117 +968,122 @@ table th:last-child{
 
 /* Mobile Styles */
 @media (max-width: 450px) {
-  .ok{
+  .ok {
     position: relative;
     margin-top: 10px;
-    
   }
 
-  .sizeInc{
+  .sizeInc {
     width: 178px;
     right: 30px;
   }
 
-  .margin-adjustpost{
+  .margin-adjustpost {
     position: relative;
     margin-left: 10%;
-    padding: 1rem
+    padding: 1rem;
   }
 
-  .margin-r{
+  .margin-r {
     padding: 0.1rem;
   }
 
- .profiles{
-  position: relative;
-  width: 100%;
- 
+  .profiles {
+    position: relative;
+    width: 100%;
+  }
+  .bg-light2 {
+    width: 230px;
+  }
 }
-  
-}
-  
 
 @media (max-width: 700px) {
   .container {
     margin-top: 8rem;
   }
-  
-
-  .setPic{
-   margin-right: 100px;
-   position: relative; 
+  .line {
+    top: 10px;
   }
-  tr td{
+  .setPic {
+    margin-right: 100px;
+    position: relative;
+  }
+  tr td {
     line-height: 1.2rem;
   }
-  .mypic{
-  height: 80px;
-  width: 80px;
-  left: 0px;
-  bottom: 60px;
-  border: 2px solid black;
-  border-radius: 50%;
-  position: inherit;
-  top: -50px;
+  .mypic {
+    height: 80px;
+    width: 80px;
+    left: 0px;
+    bottom: 60px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: inherit;
+    top: -50px;
   }
-  
-  .line{
+
+  .line {
     bottom: 200px;
     position: relative;
   }
- 
-  .line2{
+
+  .line2 {
     position: relative;
     top: 300px;
-    display:contents
+    display: contents;
   }
 
-  .deletebtn{
+  .deletebtn {
     padding: 0.9rem;
     position: relative;
     font-size: 0.8rem;
-    width:165px;
+    width: 165px;
     right: 100px;
+    margin-top: 50px !important;
   }
-  .btn-blue-gradient-div{
+  .btn-blue-gradient-div {
     bottom: 130px;
-  
   }
 
-  .btn-blue-gradient{
-    width:200px;
+  .btn-blue-gradient {
+    width: 200px;
     padding: 0.9rem;
-    width:165px;
+    width: 165px;
     text-align: left;
     font-size: 0.8rem;
-    margin-top:10px;
-    text-align: center
+    margin-top: 10px;
+    text-align: center;
   }
 
-  .post-form{
+  .post-form {
     top: 100px;
     position: relative;
-    
+
     width: 300px;
   }
 
-  .PostFormDash{
+  @media (max-width: 1000px) {
+    .post-form {
+      top: 10px;
+    }
+  }
+
+  .PostFormDash {
     margin-top: 177px;
     position: relative;
     width: 300px;
   }
-  .profiles{
+  .profiles {
     position: relative;
     margin-left: 21px;
     width: 100%;
-    
   }
-  .tablePosition{
+  .tablePosition {
     bottom: 300px;
-    position:relative;
+    position: relative;
   }
 
-  .margin-adjustpost{
+  .margin-adjustpost {
     position: relative;
     margin-left: 10%;
   }
@@ -1017,7 +1130,6 @@ table th:last-child{
     position: relative;
   }
 
-
   .profile ul {
     display: none;
   }
@@ -1027,11 +1139,9 @@ table th:last-child{
   .profile-top img,
   .profile img {
     width: 200px;
-   
-    
   }
 
-  .set-profiletopImg{
+  .set-profiletopImg {
     margin-right: 0px;
   }
 
@@ -1048,13 +1158,12 @@ table th:last-child{
     flex-direction: column;
   }
 
-  .dash-buttons a{
+  .dash-buttons a {
     display: block;
     width: 100%;
     margin-bottom: 0.2rem;
-    padding: 40px 1.5rem !important
+    padding: 40px 1.5rem !important;
   }
-  
 
   .post {
     grid-template-columns: 1fr;

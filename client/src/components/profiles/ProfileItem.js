@@ -1,34 +1,34 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import React from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ProfileItem = ({
   profile: {
-    user: { _id, name,avatar},
+    user: { _id, name, avatar },
     pic,
     status,
     company,
     location,
     skills,
-  }
+  },
 }) => {
   return (
-    <div className='profile bg-light2'>
-      <img src={pic!=null?(pic):(avatar)} alt='' className='round-img' />
+    <div className="profile bg-light2" data-aos="fade-right">
+      <img src={pic != null ? pic : avatar} alt="" className="round-img" />
       <div>
         <h2>{name}</h2>
         <p>
           {status} {company && <span> at {company}</span>}
         </p>
-        <p className='my-1'>{location && <span>{location}</span>}</p>
-        <Link to={`/profile/${_id}`} className='btn btn-blue-contrast'>
+        <p className="my-1">{location && <span>{location}</span>}</p>
+        <Link to={`/profile/${_id}`} className="btn btn-blue-contrast">
           View Profile
         </Link>
       </div>
       <ul>
         {skills.slice(0, 4).map((skill, index) => (
-          <li key={index} className='skill-color'>
-            <i className='fas fa-check' /> {skill}
+          <li key={index} className="skill-color">
+            <i className="fas fa-check" /> {skill}
           </li>
         ))}
       </ul>
@@ -37,7 +37,7 @@ const ProfileItem = ({
 };
 
 ProfileItem.propTypes = {
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
 };
 
 export default ProfileItem;

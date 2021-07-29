@@ -1,41 +1,45 @@
-import React, {Fragment, useState} from 'react'
-import {Link, Redirect} from "react-router-dom"
-import  {connect} from "react-redux"
-import {login} from "../../actions/auth"
-import PropTypes from "prop-types"
+import React, { Fragment, useState } from "react";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import { login } from "../../actions/auth";
+import PropTypes from "prop-types";
 
-export const Login = ({login, isAuthenticated}) => {
-
-  const[formdata, updateData] = useState({
-    email:"",
-    password:"",
+export const Login = ({ login, isAuthenticated }) => {
+  const [formdata, updateData] = useState({
+    email: "",
+    password: "",
   });
 
-  const{email, password} = formdata;
+  const { email, password } = formdata;
 
-  const onChange = (e=>updateData({...formdata, [e.target.name]:e.target.value}))
+  const onChange = (e) =>
+    updateData({ ...formdata, [e.target.name]: e.target.value });
 
-  const onSubmit = e=>{
+  const onSubmit = (e) => {
     e.preventDefault();
-    login(email, password)
-  }
+    login(email, password);
+  };
   if (isAuthenticated) {
     return <Redirect to="/dashboard" />;
   }
-    return (
-      <Fragment>
+  return (
+    <Fragment>
+      <div className="blurred-box">
         <h1 className="large text-primary">Sign In</h1>
-        <p className="lead"><i className="fas fa-user"></i> Sign in your Account</p>
+        <p className="lead">
+          <i className="fas fa-user"></i> Sign in your Account
+        </p>
 
-        <form className="form" onSubmit={e=>onSubmit(e)}>
+        <form className="form" onSubmit={(e) => onSubmit(e)}>
           <div className="form-group">
-            <input type="email"
-             placeholder="Email Address" 
-             name="email" 
-             value={email} 
-             onChange = {e=>onChange(e)} 
-             className="loginRegisterForm do"
-             />
+            <input
+              type="email"
+              placeholder="Email Address"
+              name="email"
+              value={email}
+              onChange={(e) => onChange(e)}
+              className="loginRegisterForm do"
+            />
           </div>
           <div className="form-group">
             <input
@@ -44,29 +48,33 @@ export const Login = ({login, isAuthenticated}) => {
               className="loginRegisterForm do"
               name="password"
               minLength="6"
-              value={password} 
-              onChange = {e=>onChange(e)}
-              />
+              value={password}
+              onChange={(e) => onChange(e)}
+            />
           </div>
-          
-          <input type="submit" className="btn btn-primary round-btn-only btn-blue-gradient" value="Login" />
+
+          <input
+            type="submit"
+            className="btn btn-primary round-btn-only btn-blue-gradient"
+            value="Login"
+          />
         </form>
 
         <p className="my-1">
           Don't have an account? <Link to="/register">Sign Up</Link>
         </p>
-
+      </div>
     </Fragment>
-    )
-}
+  );
+};
 
 Login.propTypes = {
-  login:PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool
-}
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool,
+};
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
 });
 
-export default connect(mapStateToProps, {login})(Login)
+export default connect(mapStateToProps, { login })(Login);

@@ -1,6 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
+import React from "react";
+import PropTypes from "prop-types";
 
 const ProfileTop = ({
   profile: {
@@ -10,12 +9,16 @@ const ProfileTop = ({
     website,
     social,
     pic,
-    user: { name,avatar }
-  }
+    user: { name, avatar },
+  },
 }) => {
   return (
-    <div className="profile-top bg-light p-2">
-      <img className="round-img my-1 set-profiletopImg" src={"../../../../"+pic} alt="" />
+    <div className="profile-top bg-light p-2" data-aos="flip-down">
+      <img
+        className="round-img my-1 set-profiletopImg"
+        src={"../../../../" + pic}
+        alt=""
+      />
       {console.log(pic)}
       <h1 className="large">{name}</h1>
       <p className="lead">
@@ -48,7 +51,7 @@ const ProfileTop = ({
 };
 
 ProfileTop.propTypes = {
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
 };
 
 export default ProfileTop;

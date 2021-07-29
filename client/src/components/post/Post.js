@@ -1,12 +1,12 @@
-import React, { Fragment, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import Spinner from '../layout/Spinner';
-import PostItem from '../posts/PostItem';
-import CommentForm from '../post/CommentForm';
-import CommentItem from '../post/CommentItem';
-import { getPost } from '../../actions/post';
+import React, { Fragment, useEffect } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import Spinner from "../layout/Spinner";
+import PostItem from "../posts/PostItem";
+import CommentForm from "../post/CommentForm";
+import CommentItem from "../post/CommentItem";
+import { getPost } from "../../actions/post";
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
@@ -18,16 +18,16 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
   ) : (
     <Fragment>
       <div className="btn-blue-gradient btn-size">
-        <Link to="/posts" className="white">
-          Back To Posts
+        <Link to="/posts" className="white back-to-posts">
+          <i class="fa fa-arrow-left" aria-hidden="true" />
+          <span>Back To Posts</span>
         </Link>
       </div>
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />
       <div className="comments">
         {post.comments.map((comment) => (
-          <CommentItem key={comment._id} comment={comment} postId={post._id} />       
-
+          <CommentItem key={comment._id} comment={comment} postId={post._id} />
         ))}
       </div>
     </Fragment>
@@ -36,11 +36,11 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
 
 Post.propTypes = {
   getPost: PropTypes.func.isRequired,
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  post: state.post
+  post: state.post,
 });
 
 export default connect(mapStateToProps, { getPost })(Post);
