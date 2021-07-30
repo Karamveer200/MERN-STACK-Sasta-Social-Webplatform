@@ -13,8 +13,13 @@ const ProfileItem = ({
   },
 }) => {
   return (
-    <div className="profile bg-light2" data-aos="fade-right">
-      <img src={pic != null ? pic : avatar} alt="" className="round-img" />
+    <div className="profile bg-light2">
+      <img
+        src={pic != null ? pic : avatar}
+        alt=""
+        className="round-img"
+        data-aos="example-anim3"
+      />
       <div>
         <h2>{name}</h2>
         <p>

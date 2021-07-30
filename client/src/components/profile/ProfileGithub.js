@@ -10,7 +10,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
   }, [getGithubRepos, username]);
 
   return (
-    <div className="profile-github">
+    <div className="profile-github" data-aos="zoom-in">
       <h2 className="text-primary my-1">Github Repos</h2>
       {repos.map((repo) => (
         <div

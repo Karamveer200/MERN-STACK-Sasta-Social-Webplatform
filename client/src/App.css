@@ -27,8 +27,12 @@ body {
 }
 
 .bg {
-  animation: slide 12s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #d2dfff 50%, #80ecf8 50%);
+  animation: slide 10s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    #42eaddff 50%,
+    rgb(27, 190, 215) 50%
+  );
   bottom: 0;
   left: -50%;
   opacity: 0.5;
@@ -36,15 +40,28 @@ body {
   right: -50%;
   top: 0;
   z-index: -1;
+  transform: rotateX(65);
+}
+
+.profilByIdBG {
+  position: absolute;
+  background: url("./img/profileByIdBG.jpg") no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  top: 0;
+  left: 0;
+  padding: 100px;
 }
 
 .bg2 {
   animation-direction: alternate-reverse;
-  animation-duration: 15s;
+  animation-duration: 10s;
 }
 
 .bg3 {
-  animation-duration: 15s;
+  animation-duration: 10s;
 }
 
 @keyframes slide {
@@ -342,6 +359,15 @@ p {
   text-decoration: none;
 }
 
+.bg_light3 {
+  position: relative !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
+  color: black !important;
+  overflow: hidden !important;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
 .skill-color {
   background: blue;
   background-clip: text;
@@ -358,6 +384,10 @@ p {
   bottom: 0px;
   width: 100%;
   position: relative;
+}
+
+.ok:hover {
+  background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 .btn-dark,
@@ -547,13 +577,19 @@ p {
   border: #ccc solid 1px;
 }
 
-.btn:hover {
-  opacity: 0.8;
-}
-
 .bg-light,
 .badge-light {
   border: #ccc solid 1px;
+}
+
+.btn-light:hover {
+  background-image: linear-gradient(
+    to right,
+    #0569e2 0%,
+    #128efa 51%,
+    #1f39ff 100%
+  );
+  color: white;
 }
 
 .round-img {
@@ -635,7 +671,7 @@ p {
 }
 
 [data-aos="example-anim3"] {
-  transform: rotate(720deg);
+  transform: rotate(1440deg);
   opacity: 0;
   transition-property: transform, opacity;
 }
@@ -753,7 +789,8 @@ table th:last-child {
 }
 
 .centered {
-  z-index: 3;
+  z-index: 3 !important;
+  position: relative;
 }
 
 /* Navbar */
@@ -860,6 +897,7 @@ table th:last-child {
 .profile-about {
   grid-area: about;
   text-align: center;
+  margin-top: 100px;
 }
 
 .profile-about .skills {
@@ -908,6 +946,9 @@ table th:last-child {
   border-radius: 10px;
   background-image: linear-gradient(-65deg, #feffff 0%, #b4fffb 100%);
   padding: 20px 30px;
+}
+
+.dash_exp_edu {
 }
 
 .profile-github .repo {
@@ -964,6 +1005,10 @@ table th:last-child {
   color: #aaa;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
+}
+
+.ok:hover {
+  background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Mobile Styles */

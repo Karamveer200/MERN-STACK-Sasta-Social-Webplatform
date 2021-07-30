@@ -29,7 +29,7 @@ const Experience = ({ experience, deleteExperience }) => {
   ));
   return (
     <Fragment>
-      <div className="" data-aos="zoom-out">
+      <div className="dash_exp_edu" data-aos="zoom-out">
         <div className="line2" />
         <h2 className="tablePosition">Experience credentials</h2>
         {experience.length > 0 ? (
