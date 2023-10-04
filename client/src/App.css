@@ -1,5 +1,5 @@
 /* Global Styles */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 :root {
   --primary-color: #17a2b8;
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: "Inter", "Ubuntu" !important;
+  font-family: 'Inter', 'Ubuntu' !important;
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
@@ -27,12 +27,8 @@ body {
 }
 
 .bg {
-  animation: slide 10s ease-in-out infinite alternate;
-  background-image: linear-gradient(
-    -60deg,
-    #42eaddff 50%,
-    rgb(27, 190, 215) 50%
-  );
+  animation: slide 40s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(159, 193, 241) 50%, rgb(178, 204, 237) 50%);
   bottom: 0;
   left: -50%;
   opacity: 0.5;
@@ -45,7 +41,7 @@ body {
 
 .profilByIdBG {
   position: absolute;
-  background: url("./img/profileByIdBG.jpg") no-repeat;
+  background: url('./img/profileByIdBG.jpg') no-repeat;
   background-attachment: fixed;
   height: 100vh;
   width: 100vw;
@@ -57,11 +53,11 @@ body {
 
 .bg2 {
   animation-direction: alternate-reverse;
-  animation-duration: 10s;
+  animation-duration: 40s;
 }
 
 .bg3 {
-  animation-duration: 10s;
+  animation-duration: 40s;
 }
 
 @keyframes slide {
@@ -73,12 +69,7 @@ body {
   }
 }
 .dashBG {
-  background-image: linear-gradient(
-    to right,
-    #c9ffbf 0%,
-    #ffafbd 51%,
-    #c9ffbf 100%
-  );
+  background-image: linear-gradient(to right, #c9ffbf 0%, #ffafbd 51%, #c9ffbf 100%);
   transition: 1.3s;
   background-size: 200% auto;
   box-shadow: 0 0 20px #eee;
@@ -105,7 +96,7 @@ img {
 }
 
 p {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 /* Utilities */
 .container {
@@ -147,7 +138,7 @@ p {
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .text-center {
@@ -214,7 +205,7 @@ p {
 }
 .my-3 {
   margin: 0 0 3rem 0;
-  font-family: "Ubuntu";
+  font-family: 'Ubuntu';
 }
 
 .my-marginup-only {
@@ -283,44 +274,29 @@ p {
 .alert-primary {
   background: #7868e6;
   color: #fff;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .btn-light,
 .badge-light,
 .alert-light {
-  background-image: linear-gradient(
-    to right,
-    #1fa2ff 0%,
-    #12d8fa 51%,
-    #1fa2ff 100%
-  );
+  background-image: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
   border-radius: 15px 15px 15px 15px;
   color: #333;
-  font-family: "Ubuntu";
+  font-family: 'Ubuntu';
   font-size: 1rem;
   right: 30px;
   position: relative;
 }
 
 .hover-bg-change:hover {
-  background-image: linear-gradient(
-    to right,
-    #0dffcf 0%,
-    #0ae5b2df 51%,
-    rgb(20, 178, 236) 100%
-  );
+  background-image: linear-gradient(to right, #0dffcf 0%, #0ae5b2df 51%, rgb(20, 178, 236) 100%);
   color: black !important;
   font-weight: 600 !important;
 }
 
 .bg-light {
-  background-image: linear-gradient(
-    to right,
-    #1fa2ff 0%,
-    #12d8fa 51%,
-    #1fa2ff 100%
-  );
+  background-image: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
   margin: 10px;
   padding: 15px 45px;
   transition: 0.5s;
@@ -329,7 +305,7 @@ p {
   box-shadow: 0 0 20px rgb(74, 191, 238);
   border-radius: 15px;
   display: block;
-  font-family: "Ubuntu";
+  font-family: 'Ubuntu';
 }
 .bg-light:hover {
   background-position: right center; /* change the direction of the change here */
@@ -337,12 +313,7 @@ p {
   text-decoration: none;
 }
 .bg-light2 {
-  background-image: linear-gradient(
-    to right,
-    #1fa2ff 0%,
-    #12d8fa 51%,
-    #1fa2ff 100%
-  );
+  background-image: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
   margin: 10px;
   padding: 15px 45px;
   transition: 1s;
@@ -351,7 +322,7 @@ p {
   box-shadow: 0 0 20px rgb(74, 191, 238);
   border-radius: 15px;
   display: block;
-  font-family: "Ubuntu";
+  font-family: 'Ubuntu';
 }
 .bg-light2:hover {
   background-position: right center; /* change the direction of the change here */
@@ -412,12 +383,7 @@ p {
 }
 
 .btn-back {
-  background-image: linear-gradient(
-    to right,
-    #77a1d3 0%,
-    #79cbca 51%,
-    #77a1d3 100%
-  );
+  background-image: linear-gradient(to right, #77a1d3 0%, #79cbca 51%, #77a1d3 100%);
   margin: 0 0 0 20px;
   padding: 15px 45px;
   text-align: center;
@@ -435,12 +401,7 @@ p {
 }
 
 .btn-deleteAccount {
-  background-image: linear-gradient(
-    to right,
-    #d31027 0%,
-    #df7884 51%,
-    #d31027 100%
-  );
+  background-image: linear-gradient(to right, #d31027 0%, #df7884 51%, #d31027 100%);
   margin: 25px 10px 10px 80%;
   padding: 8px 10px;
   text-align: center;
@@ -455,12 +416,7 @@ p {
 
 .btn-deleteAccount:hover {
   cursor: pointer;
-  background-image: linear-gradient(
-    to right,
-    #676363 0%,
-    #353434 51%,
-    #251c1d 100%
-  );
+  background-image: linear-gradient(to right, #676363 0%, #353434 51%, #251c1d 100%);
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
@@ -489,12 +445,7 @@ p {
 }
 
 .btn-blue-gradient {
-  background-image: linear-gradient(
-    to right,
-    #2db5eb 0%,
-    #0072ff 51%,
-    #a53ee9 100%
-  );
+  background-image: linear-gradient(to right, #2db5eb 0%, #0072ff 51%, #a53ee9 100%);
   margin: 0;
   padding: 15px 45px;
   text-align: center;
@@ -518,12 +469,7 @@ p {
 }
 
 .btn-blue-contrast {
-  background-image: linear-gradient(
-    to right,
-    #1d976c 0%,
-    #93f9b9 51%,
-    #1d976c 100%
-  );
+  background-image: linear-gradient(to right, #1d976c 0%, #93f9b9 51%, #1d976c 100%);
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
@@ -533,12 +479,7 @@ p {
 }
 
 .btn-blue-contrast:hover {
-  background-image: linear-gradient(
-    to right,
-    #36e6a5 0%,
-    #93f9b9 51%,
-    #1d976c 100%
-  );
+  background-image: linear-gradient(to right, #36e6a5 0%, #93f9b9 51%, #1d976c 100%);
   color: black;
   text-decoration: none;
 }
@@ -583,12 +524,7 @@ p {
 }
 
 .btn-light:hover {
-  background-image: linear-gradient(
-    to right,
-    #0569e2 0%,
-    #128efa 51%,
-    #1f39ff 100%
-  );
+  background-image: linear-gradient(to right, #0569e2 0%, #128efa 51%, #1f39ff 100%);
   color: white;
 }
 
@@ -611,7 +547,7 @@ p {
   margin-left: 2%;
   max-width: 250px !important;
   text-align: center;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .loginRegisterForm {
@@ -670,21 +606,21 @@ p {
   padding: 0 !important;
 }
 
-[data-aos="example-anim3"] {
+[data-aos='example-anim3'] {
   transform: rotate(1440deg);
   opacity: 0;
   transition-property: transform, opacity;
 }
 
-[data-aos="example-anim3"].aos-animate {
+[data-aos='example-anim3'].aos-animate {
   transform: rotate(0);
   opacity: 1;
 }
 
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="password"],
-.form input[type="date"],
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
 .form select,
 .form textarea {
   display: block;
@@ -695,7 +631,7 @@ p {
   border: 1px solid #ccc;
 }
 
-.form input[type="submit"],
+.form input[type='submit'],
 button {
   font: inherit;
 }
@@ -730,7 +666,7 @@ button {
   padding: 1rem;
   line-height: 1rem;
   text-align: left;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .tablePosition {
@@ -863,10 +799,10 @@ table th:last-child {
 .profile-grid {
   display: grid;
   grid-template-areas:
-    "top top"
-    "about about"
-    "exp edu"
-    "github github";
+    'top top'
+    'about about'
+    'exp edu'
+    'github github';
   grid-gap: 1rem;
 }
 
@@ -1192,11 +1128,11 @@ table th:last-child {
 
   .profile-grid {
     grid-template-areas:
-      "top"
-      "about"
-      "exp"
-      "edu"
-      "github";
+      'top'
+      'about'
+      'exp'
+      'edu'
+      'github';
   }
 
   .profile-about .skills {
